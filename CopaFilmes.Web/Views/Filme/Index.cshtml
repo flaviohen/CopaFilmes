@@ -1,0 +1,60 @@
+﻿@model IEnumerable<CopaFilmes.Web.Models.Filme>
+@using CopaFilmes.Web.Models;
+@{
+    ViewBag.Title = "Copa de Filmes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Portfolio Grid Section -->
+<section class="portfolio" id="filmes">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">FILMES</h2>
+        <hr class="star-dark mb-5">
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-md-6">
+                <h4 id="QtdFilmesSelecionado">Selecionados 0 de @Model.Count() filmes</h4>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary" style="float:right;" onclick="GerarCampeonato()">Gerar Meu Campeonato</button>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 fundoFilme">
+                    <div class="posicaoCheckBox">
+                        <input type="checkbox" id="@item.id" class="glyphicon-check" value="@item.id" onclick="selecionarFilme(this)" />
+                    </div>
+                    <div class="posicaoTitulo">
+                        <h4>@item.titulo</h4><br/>
+                        <h6>@item.ano</h6>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</section>
+<!-- About Section -->
+<section class="bg-primary text-white mb-0" id="resultado">
+    <div class="masthead bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="img-fluid mb-5 d-block mx-auto">CAMPEONATO DE FILMES</h2>
+            <h1 class="text-uppercase mb-0">Resultado Final</h1>
+            <hr class="star-light">
+            <h4 class="font-weight-light mb-0">Veja o resultado final do Campeonato de filmes de forma simples e rapida</h4>
+            <br />
+            <div id="colocacao">
+            </div>
+
+            <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light js-scroll-trigger" href="#filmes">
+                    <i class="fas fa-download mr-2"></i>
+                    Novo Campeonato
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+

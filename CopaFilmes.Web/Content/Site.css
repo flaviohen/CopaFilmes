@@ -1,0 +1,30 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.fundoFilme {
+	background-color: darkgrey;
+	color: white;
+	background-size:100px;
+	border: 1px solid white;
+}
+
+.posicaoCheckBox {
+	float: left;
+	width: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+
+.posicaoTitulo {
+	float: left;
+	width: 280px;
+}
