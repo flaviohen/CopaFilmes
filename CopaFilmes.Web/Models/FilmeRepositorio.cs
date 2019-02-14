@@ -63,14 +63,13 @@ namespace CopaFilmes.Web.Models
 
 		public List<Filme> GerarCampeonato(List<Filme> filmes)
 		{
-			List<Filme> lstFilmesEscolhido = filmes.Take(8).ToList();
-			List<Filme> lstFilmesVencedoresQuartas = DecidirQuartasDeFinal(lstFilmesEscolhido);
+			List<Filme> lstFilmesVencedoresQuartas = DecidirQuartasDeFinal(filmes);
 			List<Filme> lstFilmeVencedoresSemiFinal = DecidirSemiFinal(lstFilmesVencedoresQuartas);
 			List<Filme> lstFilmeVencedoresFinal = DecidirFinal(lstFilmeVencedoresSemiFinal);
 			return lstFilmeVencedoresFinal;
 		}
 
-		private Filme DecidirDisputa(Filme filme1, Filme filme2)
+		public Filme DecidirDisputa(Filme filme1, Filme filme2)
 		{
 			Filme filmeGanhador = null;
 			if (filme1.nota > filme2.nota)

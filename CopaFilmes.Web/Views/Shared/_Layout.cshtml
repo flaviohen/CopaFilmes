@@ -44,8 +44,9 @@
             <h2 class="font-weight-light mb-0">Selecione 8 filmes que voce deseja que entrem na competicao e depois pressione o botao Gerar Meu Campeonato para prosseguir</h2>
         </div>
     </header>
-
-    @RenderBody()
+    <div ng-app="filmeModulo" ng-controller="ctrlFilme">
+        @RenderBody()
+    </div>
 
     <!-- Footer -->
     <footer class="footer text-center">

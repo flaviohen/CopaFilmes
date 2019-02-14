@@ -20,6 +20,9 @@ namespace CopaFilmes.Web
 					  "~/Scripts/bootstrap.bundle.min.js",
 					  "~/Scripts/jquery.easing.min.js",
 					  "~/Scripts/jquery.magnific-popup.min.js",
+					  "~/Scripts/angular.min.js",
+					  "~/Scripts/HomeAngular.js",
+					  "~/Scripts/CtrlAngularFilme.min.js",
 					  "~/Scripts/freelancer.min.js",
 					  "~/Scripts/Geral.js"));
 
